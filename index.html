@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaemin Ho | 농식품시스템 전문가</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+:root {
+    --primary-color: #2E7D32; /* Nature Green */
+    --accent-color: #4CAF50;
+    --dark-green: #1B5E20;
+    --text-color: #1a1a1a;
+    --bg-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --font-heading: 'Pretendard', 'Inter', sans-serif;
+    --font-body: 'Pretendard', 'Inter', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Sections */
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    color: var(--text-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: var(--transition);
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px;
+    transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    color: white;
+    padding-top: 80px;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease;
+    word-break: keep-all;
+}
+
+.hero .tagline {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    animation: fadeInUp 1s ease 0.3s;
+    animation-fill-mode: both;
+    word-break: keep-all;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(46, 125, 50, 0.3);
+}
+
+/* About Section Magazine Style */
+.about-section {
+    background-color: #F9F9F7;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0;
+}
+
+.about-bg-shape {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 400px;
+    height: 400px;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.about-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.about-asymmetric {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-left {
+    flex: 0 0 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-vertical-title {
+    font-size: 8rem;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.04);
+    writing-mode: vertical-lr; /* Vertical text */
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    letter-spacing: 0.5rem;
+    line-height: 1;
+}
+
+.about-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding-top: 3rem;
+}
+
+.vision-text {
+    font-size: 2.8rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: var(--text-color);
+    word-break: keep-all;
+}
+
+.sprout-icon {
+    font-size: 2.2rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.about-education {
+    border-left: 2px solid var(--accent-color);
+    padding-left: 1.5rem;
+}
+
+.edu-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.edu-ko {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.edu-en {
+    font-size: 0.95rem;
+    color: #888;
+    font-weight: 400;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* Magazine Projects Section */
+.magazine-projects {
+    background-color: #1E1E1E;
+    color: #F9F9F7;
+    padding: 120px 0;
+}
+
+.magazine-projects .section-title {
+    color: #F9F9F7;
+    border-bottom: none;
+}
+
+.magazine-projects .section-title::after {
+    background-color: #b2ff59;
+}
+
+.magazine-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.magazine-card {
+    display: flex;
+    align-items: stretch;
+    background-color: #2A2A2A;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.magazine-card.format-right {
+    flex-direction: row-reverse;
+}
+
+.magazine-image {
+    flex: 1.2;
+    min-height: 350px;
+}
+
+.magazine-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.magazine-content {
+    flex: 1;
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mag-keyword {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #b2ff59;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.mag-title {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.4;
+    margin-bottom: 1.2rem;
+    word-break: keep-all;
+    color: #FFFFFF;
+}
+
+.mag-sub {
+    font-size: 0.95rem;
+    color: #AAAAAA;
+    margin-bottom: 1.5rem;
+    word-break: keep-all;
+}
+
+.mag-highlight {
+    color: #b2ff59;
+    font-weight: 700;
+}
+
+.mag-desc {
+    font-size: 1.1rem;
+    color: #DDDDDD;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+/* Experience Section */
+.timeline-section {
+    background-color: #1A3A32;
+    color: #F9F9F7;
+    padding: 100px 0;
+}
+
+.timeline-section .section-title {
+    color: #F9F9F7;
+}
+
+.timeline-section .section-title::after {
+    background-color: #D4AF37;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #D4AF37;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.timeline-date {
+    width: 50%;
+    text-align: right;
+    padding-right: 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #D4AF37;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: #D4AF37;
+    border-radius: 50%;
+    z-index: 1;
+    border: 3px solid #1A3A32;
+    box-shadow: 0 0 0 2px #D4AF37;
+}
+
+.timeline-content {
+    width: 50%;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.timeline-content .role {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #F9F9F7;
+    margin-bottom: 0.3rem;
+    line-height: 1.3;
+}
+
+.timeline-content .institution {
+    display: block;
+    font-size: 1.1rem;
+    color: rgba(249, 249, 247, 0.8);
+    font-weight: 500;
+}
+
+/* Skills Section */
+.skills-section {
+    text-align: center;
+    background-color: var(--bg-light);
+}
+
+.skills-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    flex: 1;
+    min-width: 300px;
+    background: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.skill-category h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.soft-skills-horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.soft-skills-horizontal .skill-item {
+    background-color: var(--bg-light);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1.05rem;
+}
+
+.skill-item {
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--bg-white);
+    text-align: center;
+}
+
+.email-copy-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.email-box {
+    display: flex;
+    align-items: center;
+    background: var(--bg-light);
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    gap: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.email-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.btn-copy {
+    border-radius: 50px;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 50px;
+        transition: 0.5s;
+    }
+    .nav-links.active {
+        left: 0;
+    }
+    .hamburger {
+        display: block;
+    }
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero .tagline {
+        font-size: 1.2rem;
+    }
+    .about-asymmetric {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    .about-left {
+        flex: 0 0 auto;
+    }
+    .about-vertical-title {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 5rem;
+        letter-spacing: 0;
+    }
+    .vision-text {
+        font-size: 1.8rem;
+    }
+    .about-right {
+        padding-top: 0;
+        gap: 3rem;
+    }
+    .about-bg-shape {
+        width: 250px;
+        height: 250px;
+        bottom: 0;
+        right: 0;
+    }
+    .magazine-card, .magazine-card.format-right {
+        flex-direction: column;
+    }
+    .magazine-image {
+        min-height: 250px;
+        width: 100%;
+    }
+    .magazine-content {
+        padding: 2rem;
+        width: 100%;
+    }
+    .mag-title {
+        font-size: 1.5rem;
+    }
+    .large-text {
+        font-size: 1.5rem;
+    }
+    .timeline::before {
+        left: 20px;
+        transform: none;
+    }
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3rem;
+    }
+    .timeline-date {
+        width: 100%;
+        text-align: left;
+        padding-left: 60px;
+        padding-right: 0;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+    .timeline-dot {
+        left: 20px;
+        top: 0;
+        transform: translate(-50%, 0);
+    }
+    .timeline-content {
+        width: 100%;
+        padding-left: 60px;
+    }
+    .email-box {
+        flex-direction: column;
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    .btn-copy {
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Jaemin.</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content fade-in-up">
+                <h1>Jaemin Ho</h1>
+                <p class="tagline">지속가능한 농식품시스템의 미래를 설계하는 리더</p>
+                <a href="#about" class="btn btn-primary">Discover More</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section magazine-layout fade-in-up">
+            <div class="about-bg-shape">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#e8f5e9" d="M43.6,-66.1C55.4,-57.8,63,-43.3,69.5,-28.3C76,-13.4,81.4,2,78.2,16.2C75,30.3,63.1,43.2,50.1,51.8C37.2,60.5,23.3,64.9,8.5,67.6C-6.4,70.2,-22.1,71.1,-37.2,66.1C-52.2,61,-66.5,50.1,-75.4,35.4C-84.3,20.8,-87.8,2.5,-84.1,-13.8C-80.3,-30.2,-69.3,-44.6,-55.5,-52.3C-41.6,-60,-24.9,-60.9,-9.2,-64.1C6.4,-67.2,22.8,-72.4,31.8,-74.4Z" transform="translate(100 100)" />
+                </svg>
+            </div>
+            <div class="container">
+                <div class="about-asymmetric">
+                    <div class="about-left">
+                        <h2 class="about-vertical-title">ABOUT</h2>
+                    </div>
+                    <div class="about-right">
+                        <div class="about-vision">
+                            <h3 class="vision-text">
+                                <span class="sprout-icon">🌱</span>
+                                <span class="highlight bold">식물성 단백질 푸드테크</span>를 통해<br>
+                                <span class="highlight bold">지속가능한 농식품시스템</span>에 기여합니다.
+                            </h3>
+                        </div>
+                        <div class="about-education">
+                            <p class="edu-title">Education</p>
+                            <p class="edu-ko">성균관대학교 사회학과 / 식품생명공학과</p>
+                            <p class="edu-en">SungKyunKwan University BA Sociology / BS Food science and biotechnology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section magazine-projects fade-in-up">
+            <div class="container">
+                <h2 class="section-title dark-title">Projects</h2>
+                <div class="magazine-list">
+                    <div class="magazine-card format-left">
+                        <div class="magazine-image">
+                            <img src="assets/images/project-cop27-official.jpg" alt="COP27">
+                        </div>
+                        <div class="magazine-content">
+                            <span class="mag-keyword">GLOBAL ADVOCACY</span>
+                            <h3 class="mag-title">제27차 유엔기후변화협약 (COP27) 청년대표 발표</h3>
+                            <p class="mag-desc">기후위기 대응을 위한 지속가능한 농식품 시스템의 중요성 발표</p>
+                        </div>
+                    </div>
+
+                    <div class="magazine-card format-right">
+                        <div class="magazine-content">
+                            <span class="mag-keyword">CREATIVE CONTENT</span>
+                            <h3 class="mag-title">'맛있게 채식한끼' 프로젝트</h3>
+                            <p class="mag-sub">경기청년 갭이어 프로그램 <span class="mag-highlight">300만원</span> 지원금 선정</p>
+                            <p class="mag-desc">채식 레시피 개발 및 영상 제작, 누적 조회수 26,000회 및 좋아요 650개 달성</p>
+                        </div>
+                        <div class="magazine-image">
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="채식한끼">
+                        </div>
+                    </div>
+
+                    <div class="magazine-card format-left">
+                        <div class="magazine-image">
+                            <img src="assets/images/project-soybean-tofu.jpg" alt="국산 콩 연구">
+                        </div>
+                        <div class="magazine-content">
+                            <span class="mag-keyword">SUSTAINABLE STARTUP</span>
+                            <h3 class="mag-title">(Ongoing) 국산 콩 활용 식물성 단백질 제품 개발</h3>
+                            <p class="mag-sub">군포시 사회적경제 창업팀 <span class="mag-highlight">1000만원</span> 지원금 선정</p>
+                            <p class="mag-desc">10만 톤 규모의 잉여 국산 콩 부가가치 창출을 위한 스낵 제품 구상 및 글로벌 시장 진출 전략 수립</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="timeline-section fade-in-up">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026.04~</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="role">Learner</span>
+                            <span class="institution">SPEC (SKKU Prep Entrepreneurs' Club)</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025.08 - 2026.02</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="role">Young Professional</span>
+                            <span class="institution">FAO Korea Association</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024.06 - 2025.01</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="role">Undergraduate Research Assistant</span>
+                            <span class="institution">성균관대학교 식품생명공학과</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023.01 - 2024.01</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="role">Study Abroad</span>
+                            <span class="institution">University of Leeds (영국)</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023.06 - 2023.07</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="role">AI Content Writer</span>
+                            <span class="institution">TechMahindra (영국)</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022.11</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="role">COP27 청년대표 발표</span>
+                            <span class="institution">유엔기후변화협약 당사국총회</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022.10 - 2022.12</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="role">🥉 3rd, FOOD INNOVATIVE CHALLENGE</span>
+                            <span class="institution">Proveg</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022.06 - 2022.08</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="role">융합기초프로젝트</span>
+                            <span class="institution">성균관대학교 대학혁신과공유센터</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021.12 - 2022.12</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="role">학생회장</span>
+                            <span class="institution">성균관대학교 사회학과</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022.04 - 2022.12</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="role">STEPI 기자단</span>
+                            <span class="institution">과학기술정책연구원(STEPI)</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021.02 - 2021.08</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="role">기획부장</span>
+                            <span class="institution">성균관대학교 중앙환경동아리 Re:skku</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section fade-in-up">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>🛠️ Hard Skills</h3>
+                        <div class="skills-list">
+                            <span class="skill-item">📊 Analytic skills (Stata, SAS, R, Python)</span>
+                            <span class="skill-item">🌎 Global Communication (Korean, English, French)</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🤝 Soft Skills</h3>
+                        <div class="skills-list soft-skills-horizontal">
+                            <span class="skill-item">✅ Communication</span>
+                            <span class="skill-item">✅ Organization</span>
+                            <span class="skill-item">✅ Leadership</span>
+                            <span class="skill-item">✅ Problem-solving</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section fade-in-up">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <p>지속가능한 미래를 위한 파트너십을 환영합니다.</p>
+                <div class="email-copy-wrapper">
+                    <div class="email-box">
+                        <span class="email-text" id="email-address">jaeminho21@gmail.com</span>
+                        <button class="btn btn-primary btn-copy" onclick="navigator.clipboard.writeText('jaeminho21@gmail.com'); alert('이메일 주소가 클립보드에 복사되었습니다!');">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Jaemin Ho. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('toggle'); // can add animation to lines later
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if(targetElement) {
+                const headerOffset = 80; // approximate navbar height
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Intersection Observer for scroll animations
+    const faders = document.querySelectorAll('.fade-in-up');
+    
+    // Decrease threshold for mobile compatibility
+    const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+
+    // Contact form dummy submit
+    const form = document.querySelector('.contact-form');
+    if(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('메시지가 성공적으로 전송되었습니다! (데모버전)');
+            form.reset();
+        });
+    }
+});
+    </script>
+</body>
+</html>
